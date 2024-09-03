@@ -1,4 +1,4 @@
-class pr001 {
+
 	public static void main(String args[]) {
 		System.out.println("Pervaya programma na Java"); // comment stroka na console
 		int Var1 = 1024;
