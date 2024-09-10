@@ -25,6 +25,38 @@ class pr002 {
 		System.out.println("d = " + d);
 		dd = (double)b/2;
 		System.out.println("dd = " + dd);
-	
+
+		//simvolniy tip
+		System.out.println("PRIMERI ISPOLZOVANOYA SYMBOL TYPE \n");
+		char ch;
+		ch = 'D';
+		System.out.println("Znachenie ch: " + ch);
+		ch++;
+		System.out.println("novoe znachenie ch: " + ch); 
+		ch = 97;
+		System.out.println("Znachenie ch s kodom 97: " + ch); 
+		I = (int)ch;
+		System.out.println("kode ch: " + I); 
+		ch = 'А';
+		for (i=0; i<63; i++) {
+			I = (int)ch;
+			System.out.print("kod simvola " + ch + ": " + I + " \n");
+			ch++;
+			}
+
+		//logicheskiy type dannix
+		System.out.println ("PRIMERI ISPOLZOVANIYA LOGICHESKOGO TYPE\n");
+		boolean ligm;
+		ligm = false;
+		System.out.println("znachenie ligm: " + ligm);
+		ligm = true;
+		System.out.println("znachenie ligm: " + ligm);
+		if(ligm) System.out.println("vivodim stroky, esli \"ligm\" true");
+		if(!ligm) System.out.println("vivodim stroky, esli inversia \"ligm\" true");
+		ligm = ch=='я';
+		if(ligm) 
+			System.out.println("Symbol ch raven \"я\""); 
+
+
 	}
 }
