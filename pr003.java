@@ -53,7 +53,7 @@ class pr003 {
 		
 		//beskonechnii cycle
 		// System.out.println ("\n");
-		// for (;;);
+		// for (;;); {		// ch -
 		
 		System.out.println ("\n");
 		int sum = 0;
@@ -94,5 +94,12 @@ class pr003 {
 				ignore = (char) System.in.read();
 			} while (ignore != '\n');
 		} while (ch != 'q');
+
+		// operator break
+
+		for (x1 = 100; x1 > -100; x1 -= 5){
+			System.out.println(x1);
+			if (x1 == 50) break; // prekrawaem vipolnenie cycle
+		}
 	}
 }
