@@ -46,8 +46,8 @@ class help {
                                 System.out.println(" operator: ");
 				System.out.println("while (uslovie)");
 				break;
-                        default:
-                                System.out.println("Неверный выбор раздела");
-                }
+                
+        	
+		}
         }
 }
