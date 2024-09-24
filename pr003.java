@@ -35,10 +35,10 @@ class pr003 {
 		System.out.println ("\n");
 
 		int i8;
+		char ignore;
 		System.out.println ("Dlya ostanovki cycle najmite klavishy \"S\"");
 		for (i8 = 0; (char) System.in.read() != 'S'; i8++)
 			System.out.println("Iteration №" + i8);
-
 		System.out.println ("\n");
 		for (i8 = 0; i8 < 10;) {
 			System.out.println ("Iteration №" + i8);
@@ -83,5 +83,16 @@ class pr003 {
 			}
 		System.out.println ("2 v stepeni " + i9 + " ravno " + result);
 		}
+
+		// cycle do-while
+		//
+
+		do {
+			System.out.print("Najmite klavishy zatem ENTER");
+			ch = (char) System.in.read();
+			do {
+				ignore = (char) System.in.read();
+			} while (ignore != '\n');
+		} while (ch != 'q');
 	}
 }
