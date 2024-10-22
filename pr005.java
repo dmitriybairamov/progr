@@ -173,9 +173,24 @@ for(int i3=5; i3<7; i3++) {
 			}
 			System.out.println("New stroka massiva: ");
                 }
-                System.out.println("Summa: " + summ);
-		
+        	
+	  	//massivi strok
+		//
 
+		System.out.println();
+		String[] strs = {"Elements", "strokovogo", "massiva", "dlya", "primera"};
+		System.out.println("Isxodniy massiv: ");
+		for (String s : strs)
+			System.out.print(s + " ");
+		System.out.println ("\n");
+	
+		strs[1] = "izmenennogo strokovogo";
+		strs[3] = "dlya ewe odnogo";
+
+		System.out.println("Izmnenenniy massiv: ");
+		for (String s : strs)
+			System.out.print(s + " ");
+		System.out.println ("\n");
 
 	}
 }
