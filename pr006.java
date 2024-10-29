@@ -104,6 +104,21 @@ class pr006 {
                         v = v >> 1;
                 }
 
+		// operation ?
+		System.out.println();
+		// virajenie 1, ?, virajenie 2 ili virajenie 3
+		//primer vichislenia absolut znachenia val2
+		int val2 = -25;
+		int absval = val2 < 0 ? -val2 : val2;
+
+		//primer iskluchenia delenia na 0
+		int result;
+		for (int i = -5; i<6; i++) {
+			result = i != 0? 100/i : 0;
+			if ( i != 0) 
+				System.out.println("100 / " + i + " ravno " + result);
+		}
+		System.out.println();
 	}
 }
 		
