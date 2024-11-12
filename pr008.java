@@ -39,6 +39,43 @@ class StaticBlock {
 
         }
 }
+class Outer {
+	int[] nums;
+	Outer(int[] n) {
+		nums = n;
+	}
+
+	void analyze() {
+		Inner inOb = new Inner();
+		System.out.println("minimalnoe znachenie: " + inOb.min());
+		System.out.println("Max znachenie: " + inOb.max());
+		System.out.println("Srednee znachenie: " + inOb.avg());
+	}
+
+	// vnytrennii klass
+	class Inner {
+		int min() {
+			int m = nums[0];
+			for(int i=1; i<nums.length; i++)
+				if(nums[i] < m) m = nums[i];
+			return m;
+		}
+		int max() {
+                        int m = nums[0];
+                        for(int i=1; i<nums.length; i++)
+                                if(nums[i] > m) m = nums[i];
+                        return m;
+                }
+		int avg() {
+                        int a = 0;
+                        for(int i=0; i<nums.length; i++)
+                                a += nums[i];
+                        return a/nums.length;
+                }
+
+	}
+}
+
 
 class pr008 {
         public static void main(String[] args) {
@@ -88,5 +125,10 @@ class pr008 {
                 System.out.println("квадратный корень из 2: " + StaticBlock.rootOf2);
                 System.out.println("квадратный корень из 3: " + StaticBlock.rootOf3);
 
+		//demonstacia raboti vnytr classa
+		int[] x = { 3, 2, 1, 5, 6, 9, 7, 2};
+		Outer outOb = new Outer (x);
+
+		outOb.analyze();
         }
 }
