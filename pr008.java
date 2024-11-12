@@ -84,7 +84,14 @@ class VarArgs {
 		for (int i = 0; i < v.length; i++)
 			System.out.println(" arg " + i + ": " + v[i]);
 		System.out.println();
-		}
+	}
+	static void vaTest2(String msg, int ... v) {
+		System.out.println(msg + v.length);
+		System.out.println("Soderjimoe args: ");
+                for (int i = 0; i < v.length; i++)
+                        System.out.println(" arg " + i + ": " + v[i]);
+                System.out.println();
+	}
 }
 class pr008 {
         public static void main(String[] args) {
@@ -176,5 +183,10 @@ class pr008 {
 		VarArgs.vaTest(10);
 		VarArgs.vaTest(1, 2, 3);
 		VarArgs.vaTest();
+
+		System.out.println();
+		VarArgs.vaTest("Odin argyment: ", 10);
+                VarArgs.vaTest("dva argymenta: ", 1, 2, 3);
+                VarArgs.vaTest("bez args");
 	}
 }
