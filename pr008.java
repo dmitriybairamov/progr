@@ -77,6 +77,15 @@ class Outer {
 }
 
 
+class VarArgs {
+	static void vaTest(int ... v ) {
+		System.out.println("Kolvo args: " + v.length);
+		System.out.println("Soderjimoe args: ");
+		for (int i = 0; i < v.length; i++)
+			System.out.println(" arg " + i + ": " + v[i]);
+		System.out.println();
+		}
+}
 class pr008 {
         public static void main(String[] args) {
 
@@ -130,5 +139,42 @@ class pr008 {
 		Outer outOb = new Outer (x);
 
 		outOb.analyze();
-        }
+
+		class ShowBt {
+			int numbits;
+			ShowBt (int n) {
+				numbits = n;
+			}
+			void show(long val) {
+				long mask = 1;
+				mask <<= numbits-1;
+				int spacer = 0;
+				for(;mask!=0; mask>>>=1) {
+					if ((val & mask) != 0)
+						System.out.print("1");
+					else
+						System.out.print("0");
+					spacer++;
+					if((spacer%8)==0) {
+						System.out.print(" ");
+						spacer = 0;
+					}
+				}
+			System.out.println();
+			}
+		}
+		System.out.println();
+		for (byte b=0; b<10; b++) {
+			ShowBt byteval = new ShowBt(8);
+			System.out.print(b + " v dvoichnom vide: ");
+			byteval.show(b);
+		}
+        	System.out.println();
+
+		//demonstr vizova metoda s premenn kolvom args
+
+		VarArgs.vaTest(10);
+		VarArgs.vaTest(1, 2, 3);
+		VarArgs.vaTest();
+	}
 }
