@@ -27,6 +27,15 @@ class TwoDShape {
 
 class Triangle extends TwoDShape {
 	String style;
+	//konstruktor
+	Triangle(String s, double w, double h) {
+		//ystanovka znachenia dlya peremennoi podklassa
+		style = s;
+		//ystanovka znach dlya peremennix syperklassa
+		setWidth(w);
+		setHeight(h);
+	}
+	
 	double area() {
 		return getWidth()*getHeight()/2;
 	}
@@ -38,6 +47,15 @@ class Triangle extends TwoDShape {
 
 class Rectangle extends TwoDShape {
 	String outline;
+	
+	//konstrutor
+	Rectangle(String o, double w, double h) {
+		//ystanovka znachenia dlya peremennoi podklassa
+		outline=o;
+		//ystanovka znachenia dlya peremennix syperklassa
+		setWidth(w);
+		setHeight(h);
+	}
 
 	double area() {
 		return getWidth() * getHeight();
@@ -54,10 +72,11 @@ class Rectangle extends TwoDShape {
 
 class pr009 {
 	public static void main(String[] args) {
-		Triangle t1 = new Triangle();
-		Triangle t2 = new Triangle();
-		Rectangle r1 = new Rectangle();
-		Rectangle r2 = new Rectangle();
+		Triangle t1 = new Triangle("zakrashenniy", 4.0, 4.0);
+		Triangle t2 = new Triangle("konturniy", 8.0, 12.0);
+		Rectangle r1 = new Rectangle("sploshnaya", 4.0, 4.0);
+		Rectangle r2 = new Rectangle("pynktirnaya", 8.0, 12.0);
+/*		
 		t1.setWidth (4.0);
 		t1.setHeight (4.0);
 		t1.style = "zakrashenni";
@@ -70,6 +89,7 @@ class pr009 {
 		r2.setWidth (8.0);
                 r2.setHeight (12.0);
                 r2.outline = "punktirnaya";
+*/
 		System.out.println("Info about t1: ");
 		t1.showStyle();
 		t1.showDim();
