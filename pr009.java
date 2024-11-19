@@ -3,6 +3,7 @@
 class TwoDShape {
 	private double width;
 	private double height;
+	int common;
 	//konstryktor bez parametrov
 	TwoDShape() {
 		width = height = 0.0;
@@ -40,6 +41,7 @@ class TwoDShape {
 }
 
 class Triangle extends TwoDShape {
+	int common;
 	String style;
 	
 	//konstryktor po umolcaniyou
@@ -60,6 +62,14 @@ class Triangle extends TwoDShape {
 		style = "zakrashenniy";
 	}
 
+	//konstryktor s demonstaciyei dostypa k 1imennoi peremennoy super classa
+	Triangle(int a, int b) {
+		super.common = a;
+		common = b;
+		System.out.println("Znachenie common v superclasse: " + super.common);
+		System.out.println("Znachenie common v podklasse: " + common);
+	}
+
 	double area() {
 		return getWidth()*getHeight()/2;
 	}
@@ -70,6 +80,7 @@ class Triangle extends TwoDShape {
 }
 
 class Rectangle extends TwoDShape {
+	int common;
 	String outline;
 	
 	//konstrutori
@@ -89,6 +100,13 @@ class Rectangle extends TwoDShape {
 		outline=o;
 	}
 
+	//konstryktor s demonstaciyei dostypa k 1imennoi peremennoy super classa
+        Rectangle(int a, int b) {
+                super.common = a;
+                common = b;
+        }
+
+
 	double area() {
 		return getWidth() * getHeight();
 	}
@@ -107,9 +125,11 @@ class pr009 {
 		Triangle t1 = new Triangle();
 		Triangle t2 = new Triangle("konturniy", 8.0, 12.0);
 		Triangle t3 = new Triangle(4.0);
+		Triangle t4 = new Triangle(5, 10);
 		Rectangle r1 = new Rectangle("sploshnaya", 4.0, 4.0);
 		Rectangle r2 = new Rectangle(5.0);
-/*		
+		System.out.println();
+/*
 		t1.setWidth (4.0);
 		t1.setHeight (4.0);
 		t1.style = "zakrashenni";
