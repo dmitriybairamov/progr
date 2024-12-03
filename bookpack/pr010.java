@@ -1,6 +1,7 @@
 
 package bookpack;
-public class Book {
+/*
+class Book {
 	private String title;
 	private String author;
 	private int pubDate;
@@ -19,7 +20,7 @@ public class Book {
 	}
 
 }
-
+*/ 
 class pr010 {
 	public static void main(String[] args) {
 		
@@ -34,3 +35,4 @@ class pr010 {
 
 	}
 }	
+
